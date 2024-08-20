@@ -55,7 +55,7 @@
             <Button fx:id="deleteBtn" mnemonicParsing="false" text="Remove" />
          </children>
       </HBox>
-      <TableView layoutX="442.0" layoutY="86.0" prefHeight="267.0" prefWidth="357.0">
+      <TableView fx:id="productTbl" layoutX="442.0" layoutY="86.0" prefHeight="267.0" prefWidth="357.0">
         <columns>
           <TableColumn fx:id="nameCol" prefWidth="120.0" text="Name" />
           <TableColumn fx:id="brandCol" prefWidth="130.0" text="Brand" />

@@ -67,7 +67,7 @@ public class ProductController implements Initializable {
                 alert.setHeaderText(null);
                 alert.setContentText("Product Saved");
                 alert.showAndWait();
-                //resetForm();
+                resetForm();
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);
@@ -147,7 +147,6 @@ public class ProductController implements Initializable {
         ObservableList<Product> products = FXCollections.observableList(productList);
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         brandCol.setCellValueFactory(new PropertyValueFactory<>("brand"));
-        countCol.setCellValueFactory(new PropertyValueFactory<>("count"));
         priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         productTbl.setItems(products);
