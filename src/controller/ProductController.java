@@ -47,11 +47,12 @@ public class ProductController implements Initializable {
             brandCmb.getItems().add(brand);
         }
 
-        Brand brand = (Brand) brandCmb.getSelectionModel().getSelectedItem();
+
         saveBtn.setOnAction(event -> {
 
 
             try {
+                Brand brand = (Brand) brandCmb.getSelectionModel().getSelectedItem();
                 ProductDa productDa = new ProductDa();
                 Product product = Product
                         .builder()
@@ -76,6 +77,7 @@ public class ProductController implements Initializable {
         editBtn.setOnAction(event -> {
 
             try {
+                Brand brand = (Brand) brandCmb.getSelectionModel().getSelectedItem();
                 ProductDa productDa = new ProductDa();
                 Product product = Product
                         .builder()
@@ -91,7 +93,7 @@ public class ProductController implements Initializable {
                 alert.setHeaderText(null);
                 alert.setContentText("Product Edited");
                 alert.showAndWait();
-                resetForm();
+                //resetForm();
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);
@@ -102,6 +104,7 @@ public class ProductController implements Initializable {
         deleteBtn.setOnAction(event -> {
 
             try {
+
                 ProductDa productDa = new ProductDa();
                 productDa.deleteProduct(Integer.parseInt(idTxt.getText()));
                 Alert alert = new Alert(Alert.AlertType.INFORMATION,"Product Deleted");
@@ -109,7 +112,7 @@ public class ProductController implements Initializable {
                 alert.setHeaderText(null);
                 alert.setContentText("Product Deleted");
                 alert.showAndWait();
-                resetForm();
+                //resetForm();
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);

@@ -25,7 +25,7 @@ public class testProduct {
                 .build();
 
             ProductDa productDa = new ProductDa();
-            productDa.editProduct(product);
+            productDa.saveProduct(product);
 
     }
 }
