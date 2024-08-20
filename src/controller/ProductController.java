@@ -40,13 +40,14 @@ public class ProductController implements Initializable {
     private TableColumn<Product, Double> priceCol;
 
 
+    @SneakyThrows
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         for (Brand brand : Brand.values()) {
             brandCmb.getItems().add(brand);
         }
-
+        resetForm();
 
         saveBtn.setOnAction(event -> {
 
@@ -120,6 +121,15 @@ public class ProductController implements Initializable {
 
         });
 
+        productTbl.setOnMouseReleased(event -> {
+            Product person = productTbl.getSelectionModel().getSelectedItem();
+            idTxt.setText(String.valueOf(person.getId()));
+            nameTxt.setText(person.getName());
+            countTxt.setText(String.valueOf(person.getCount()));
+            priceTxt.setText(String.valueOf(person.getPrice()));
+            brandCmb.getSelectionModel().select(person.getBrand());
+        });
+
 
     }
 
@@ -136,10 +146,6 @@ public class ProductController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Find Persons Error\n" + e.getMessage());
             alert.show();
         }
-
-
-
-
     }
 
     public void refreshTbl(List<Product> productList){
