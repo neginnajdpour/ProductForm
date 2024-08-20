@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="commons-dbcp2-2.9.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/lib/commons-dbcp2-2.9.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/lib/commons-pool2-2.10.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/lib/gson-2.10.1.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/lib/lombok-1.18.24.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/lib/mysql-connector-java-8.0.30.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/lib/ojdbc8-21.9.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/lib/protobuf-java-3.19.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
