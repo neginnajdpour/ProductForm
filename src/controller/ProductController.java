@@ -34,9 +34,6 @@ public class ProductController implements Initializable {
     private TableColumn<Product, String> nameCol, brandCol;
 
     @FXML
-    private TableColumn<Product, Integer> countCol;
-
-    @FXML
     private TableColumn<Product, Double> priceCol;
 
 
