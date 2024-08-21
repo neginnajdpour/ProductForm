@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductDa {
+public class ProductDa implements AutoCloseable {
 
     private JdbcProvider jdbcProvider = new JdbcProvider();
 
@@ -22,8 +22,6 @@ public class ProductDa {
     public ProductDa() throws SQLException {
         connection = jdbcProvider.getConnection();
     }
-
-
 
     public void saveProduct(Product product) throws SQLException {
 
@@ -69,4 +67,8 @@ public class ProductDa {
         return products;
     }
 
+    @Override
+    public void close() throws Exception {
+        connection.close();
+    }
 }
