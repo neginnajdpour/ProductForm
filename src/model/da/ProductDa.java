@@ -13,12 +13,13 @@ import java.util.List;
 
 public class ProductDa {
 
+    private JdbcProvider jdbcProvider = new JdbcProvider();
+
     private Connection connection;
     private PreparedStatement preparedStatement;
     private ResultSet rs;
 
     public ProductDa() throws SQLException {
-        JdbcProvider jdbcProvider = new JdbcProvider();
         connection = jdbcProvider.getConnection();
     }
 

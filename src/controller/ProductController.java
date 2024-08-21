@@ -94,7 +94,7 @@ public class ProductController implements Initializable {
                 alert.setHeaderText(null);
                 alert.setContentText("Product Edited");
                 alert.showAndWait();
-                //resetForm();
+                resetForm();
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);
@@ -113,7 +113,7 @@ public class ProductController implements Initializable {
                 alert.setHeaderText(null);
                 alert.setContentText("Product Deleted");
                 alert.showAndWait();
-                //resetForm();
+                resetForm();
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);

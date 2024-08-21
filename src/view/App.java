@@ -12,6 +12,5 @@ public class App extends Application {
         Scene scene = new Scene(FXMLLoader.load(getClass().getResource("product.fxml")));
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 }
